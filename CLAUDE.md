@@ -1,10 +1,17 @@
 # Formosana Project
 
 ## Overview
-This project contains linguistic reference tables for Taiwanese Hokkien (台語), including the official Tai-lo (臺灣台語羅馬字拼音方案) syllable table with Taiwanese kana annotations.
+Taiwanese Hokkien (台語) linguistic reference data, including the official Tai-lo syllable table with Taiwanese kana annotations and MOE dictionary data.
 
 ## Key Files
 - `臺灣台語羅馬字拼音方案音節表_table.md` — Tai-lo syllable table with Taiwanese kana (台灣語假名)
+- `docs_MOE/kautian.ods` — MOE Taiwanese dictionary data (source)
+- `docs_MOE/kautian_*.csv` — CSV exports of each sheet from kautian.ods
+
+## Scripts
+- `ods2csv.py` — Convert ODS to CSV (one per sheet). Requires `odfpy`.
+- `extract_pairs.py` — Extract 羅馬字/漢字 pairs from kautian_詞目.csv. Removes markers (【替】【白】【文】【俗】).
+- `docs_MOE/parse_tailo.py` — Parse MOE syllable table PDF text into markdown table.
 
 ## Taiwanese Kana System
 
